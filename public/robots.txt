@@ -1,13 +1,4 @@
-# Robots.txt para NaTV de Sua Casa
-# https://natvdesuacasa.casa
-
-# Permitir todos os bots
 User-agent: *
 Allow: /
 
-# Bloquear áreas privadas (se existirem)
-Disallow: /admin/
-Disallow: /private/
-
-# Sitemap do site
 Sitemap: https://natvdesuacasa.casa/sitemap.xml
