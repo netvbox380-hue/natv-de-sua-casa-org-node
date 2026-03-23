@@ -1,24 +1,13 @@
 # Robots.txt para NaTV de Sua Casa
-# https://natvdesuacasa.com.br
+# https://natvdesuacasa.casa
 
-# Permitir todos os bots de busca
+# Permitir todos os bots
 User-agent: *
 Allow: /
 
-# Sitemap
-Sitemap: https://natvdesuacasa.com.br/sitemap.xml
-
-# Bloquear acesso a arquivos desnecessários (se houver)
+# Bloquear áreas privadas (se existirem)
 Disallow: /admin/
 Disallow: /private/
-Disallow: /*.json$
 
-# Regras específicas para Googlebot
-User-agent: Googlebot
-Allow: /
-Crawl-delay: 1
-
-# Regras específicas para Bingbot
-User-agent: Bingbot
-Allow: /
-Crawl-delay: 2
+# Sitemap do site
+Sitemap: https://natvdesuacasa.casa/sitemap.xml
