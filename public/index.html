@@ -1,13 +1,37 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <!-- ===== ANALYTICS: Google Analytics (gtag.js) ===== -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-4L4PL12CWG"></script>
+  <!-- ===== GOOGLE ADS + ANALYTICS ===== -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-987590909"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
+
+    // Google Ads
+    gtag('config', 'AW-987590909');
+
+    // Google Analytics (mantido)
     gtag('config', 'G-4L4PL12CWG');
+
+    // Conversão WhatsApp
+    function trackWhatsAppClick(url) {
+      gtag('event', 'conversion', {
+        'send_to': 'AW-987590909/WHATSAPP_CONVERSION',
+        'event_callback': function () {
+          if (url) window.open(url, '_blank', 'noopener,noreferrer');
+        }
+      });
+
+      // fallback caso o callback não dispare rápido
+      if (url) {
+        setTimeout(function () {
+          window.open(url, '_blank', 'noopener,noreferrer');
+        }, 300);
+      }
+
+      return false;
+    }
   </script>
   
   <!-- ===== SEO: Meta Tags Básicas ===== -->
@@ -991,7 +1015,7 @@
               <meta itemprop="priceCurrency" content="BRL"/>
               Sem conteúdo adulto e novelas
             </p>
-            <a href="https://wa.me/5583998180866?text=Olá, tenho interesse no Plano Básico de R$30 (sem adulto e novelas)" style="background: var(--accent); color:#000;" target="_blank" rel="noopener noreferrer">
+            <a href="https://wa.me/5583998180866?text=Olá, tenho interesse no Plano Básico de R$30 (sem adulto e novelas)" onclick="return trackWhatsAppClick(this.href)" style="background: var(--accent); color:#000;" target="_blank" rel="noopener noreferrer">
               Falar no WhatsApp
             </a>
           </article>
@@ -1003,7 +1027,7 @@
               <meta itemprop="priceCurrency" content="BRL"/>
               Inclui todo conteúdo
             </p>
-            <a href="https://wa.me/5583998180866?text=Olá, tenho interesse no Plano Completo de R$35 (com tudo incluso)" style="background: var(--accent); color:#000;" target="_blank" rel="noopener noreferrer">
+            <a href="https://wa.me/5583998180866?text=Olá, tenho interesse no Plano Completo de R$35 (com tudo incluso)" onclick="return trackWhatsAppClick(this.href)" style="background: var(--accent); color:#000;" target="_blank" rel="noopener noreferrer">
               Falar no WhatsApp
             </a>
           </article>
@@ -1015,7 +1039,7 @@
               <meta itemprop="priceCurrency" content="BRL"/>
               Plano completo por 3 meses
             </p>
-            <a href="https://wa.me/5583998180866?text=Olá, quero o Plano Trimestral (3 meses por R$90)" style="background: var(--accent); color:#000;" target="_blank" rel="noopener noreferrer">
+            <a href="https://wa.me/5583998180866?text=Olá, quero o Plano Trimestral (3 meses por R$90)" onclick="return trackWhatsAppClick(this.href)" style="background: var(--accent); color:#000;" target="_blank" rel="noopener noreferrer">
               Falar no WhatsApp
             </a>
           </article>
@@ -1027,7 +1051,7 @@
               <meta itemprop="priceCurrency" content="BRL"/>
               Plano completo por 6 meses
             </p>
-            <a href="https://wa.me/5583998180866?text=Olá, quero o Plano Semestral (6 meses por R$150)" style="background: var(--accent); color:#000;" target="_blank" rel="noopener noreferrer">
+            <a href="https://wa.me/5583998180866?text=Olá, quero o Plano Semestral (6 meses por R$150)" onclick="return trackWhatsAppClick(this.href)" style="background: var(--accent); color:#000;" target="_blank" rel="noopener noreferrer">
               Falar no WhatsApp
             </a>
           </article>
@@ -1039,7 +1063,7 @@
               <meta itemprop="priceCurrency" content="BRL"/>
               Plano completo por 12 meses
             </p>
-            <a href="https://wa.me/5583998180866?text=Olá, quero o Plano Anual (12 meses por R$270)" style="background: gold; color:#000;" target="_blank" rel="noopener noreferrer">
+            <a href="https://wa.me/5583998180866?text=Olá, quero o Plano Anual (12 meses por R$270)" onclick="return trackWhatsAppClick(this.href)" style="background: gold; color:#000;" target="_blank" rel="noopener noreferrer">
               Falar no WhatsApp
             </a>
           </article>
@@ -1063,7 +1087,7 @@
           Ganhe <strong style="color:#4caf50;">50% de desconto</strong> no <strong>segundo mês do plano mensal</strong>! É só informar o número de quem te indicou no momento da assinatura.
         </p>
         <div style="text-align:center; margin-top:12px;">
-          <a href="https://wa.me/5583998180866?text=Fui%20indicado%20por%20um%20cliente%20e%20gostaria%20de%2050%%20de%20desconto%20no%20primeiro%20m%C3%AAs%20do%20plano%20mensal." style="background:var(--accent-2); color:#fff; padding:10px 14px; border-radius:8px; text-decoration:none;" target="_blank" rel="noopener noreferrer">
+          <a href="https://wa.me/5583998180866?text=Fui%20indicado%20por%20um%20cliente%20e%20gostaria%20de%2050%%20de%20desconto%20no%20primeiro%20m%C3%AAs%20do%20plano%20mensal." onclick="return trackWhatsAppClick(this.href)" style="background:var(--accent-2); color:#fff; padding:10px 14px; border-radius:8px; text-decoration:none;" target="_blank" rel="noopener noreferrer">
             Quero o Desconto
           </a>
         </div>
@@ -1075,7 +1099,7 @@
       <div class="wrap">
         <h2>Compartilhe este site com um amigo</h2>
         <p>Indique este site aos seus amigos e transforme a TV deles!</p>
-        <a href="https://api.whatsapp.com/send?text=🚀 Conheça o app de TV NaTVBox! Assista canais, filmes e séries direto na sua TV ou celular. Baixe aqui: https://natvdesuacasa.casa/" style="background:#fff; color:#000; padding:10px 14px; border-radius:8px; text-decoration:none;" target="_blank" rel="noopener noreferrer">
+        <a href="https://api.whatsapp.com/send?text=🚀 Conheça o app de TV NaTVBox! Assista canais, filmes e séries direto na sua TV ou celular. Baixe aqui: https://natvdesuacasa.casa/" onclick="return trackWhatsAppClick(this.href)" style="background:#fff; color:#000; padding:10px 14px; border-radius:8px; text-decoration:none;" target="_blank" rel="noopener noreferrer">
           Compartilhar via WhatsApp
         </a>
       </div>
@@ -1175,13 +1199,13 @@
     <div class="wrap">
       <p>&copy; 2025 NaTV de Sua Casa. Todos os direitos reservados.</p>
       <p style="margin-top: 8px; font-size: 0.85rem;">
-        <a href="https://wa.me/5583998180866" style="color: var(--accent); text-decoration: none;">Contato via WhatsApp</a>
+        <a href="https://wa.me/5583998180866" onclick="return trackWhatsAppClick(this.href)" style="color: var(--accent); text-decoration: none;">Contato via WhatsApp</a>
       </p>
     </div>
   </footer>
 
   <!-- ===== WHATSAPP FLOAT ===== -->
-  <a class="whatsapp-float mobile-only" href="https://wa.me/5583998180866?text=Ol%C3%A1%2C%20vim%20do%20aplicativo%20e%20gostaria%20de%20conhecer%20os%20canais." target="_blank" rel="noopener noreferrer" title="Fale conosco no WhatsApp" aria-label="Abrir WhatsApp para contato">
+  <a class="whatsapp-float mobile-only" href="https://wa.me/5583998180866?text=Ol%C3%A1%2C%20vim%20do%20aplicativo%20e%20gostaria%20de%20conhecer%20os%20canais." onclick="return trackWhatsAppClick(this.href)" target="_blank" rel="noopener noreferrer" title="Fale conosco no WhatsApp" aria-label="Abrir WhatsApp para contato">
     <img alt="Ícone do WhatsApp" src="/assets/whatsapp.svg" loading="lazy"/>
   </a>
 
@@ -1227,7 +1251,7 @@
             Opção 2 (VU Player)
           </a>
         </div>
-        <a class="action-btn whatsapp-action" href="https://wa.me/5583998180866" target="_blank" rel="noopener noreferrer">
+        <a class="action-btn whatsapp-action" href="https://wa.me/5583998180866" onclick="return trackWhatsAppClick(this.href)" target="_blank" rel="noopener noreferrer">
           4. Falar com Atendente
         </a>
       </div>
@@ -1306,6 +1330,7 @@
 
           const msg = `Olá, quero testar agora: ${title}`;
           modalWhats.href = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(msg)}`;
+          modalWhats.setAttribute('onclick', 'return trackWhatsAppClick(this.href)');
 
           modalOverlay.classList.add('open');
           modalOverlay.setAttribute('aria-hidden','false');
@@ -1380,7 +1405,6 @@
     })();
   </script>
 
-
   <script>
     (function() {
       function fallbackSvg(label, bg1, bg2) {
@@ -1430,7 +1454,6 @@
       }
     })();
   </script>
-
 
   <!-- Feedback System Script (Backend Netlify) -->
   <script>
